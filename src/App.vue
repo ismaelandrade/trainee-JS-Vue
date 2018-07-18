@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <img src="./assets/logo.png">
     <h1>Hello World</h1>
   </div>
@@ -13,4 +13,7 @@ export default {
 </script>
 
 <style>
+#app {
+  text-align: center;
+}
 </style>
