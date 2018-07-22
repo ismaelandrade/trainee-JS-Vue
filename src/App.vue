@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import TodoPage from './components/TodoPage';
+import TodoPage from './components/todo/TodoPage'
 export default {
   name: 'app',
   components: {
-    TodoPage,
-  },
+    TodoPage
+  }
 }
 </script>
 <style>
