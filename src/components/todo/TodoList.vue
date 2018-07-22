@@ -1,7 +1,11 @@
 <template>
   <ul class="list-group">
-    <li v-for="(todo, i) in todos" :key="i">
-      <input type="checkbox" @change="toggleTodo(todo)" :checked="todo.done">
+    <li v-for="(todo, i) in todos" :key="i" :class="{ 'done-task': todo.done }">
+      <input
+        type="checkbox"
+        @change="toggleTodo(todo)"
+        :checked="todo.done"
+      >
       {{ todo.value }}
     </li>
   </ul>
