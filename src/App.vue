@@ -1,15 +1,16 @@
 <template>
-  <div id="app" class="container">
+  <div id="app">
+    <nav-bar />
     <router-view />
   </div>
 </template>
 
 <script>
-import TodoPage from './components/todo/TodoPage'
+import NavBar from './components/NavBar'
 export default {
   name: 'app',
   components: {
-    TodoPage
+    NavBar
   }
 }
 </script>

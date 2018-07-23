@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="container">
     <h1>{{ title || 'My to-do list'}}</h1>
     <hr>
-    <div class="container">
+    <div>
       <todo-form @addTodo="addTodo" />
       <h3>To-do</h3>
       <todo-list :todos="pendingTodos" @toggleTodo="toggleTodo" />
