@@ -1,11 +1,17 @@
 <template>
   <div class="shopping-cart-link">
-    <span class="counter">2</span>
+    <span class="counter">{{count}}</span>
     <router-link to="/shopping-cart">
       <i class="material-icons cart-icon">shopping_cart</i>
     </router-link>
   </div>
 </template>
+
+<script>
+export default {
+  props: ['count']
+}
+</script>
 
 <style scoped>
   .shopping-cart-link {

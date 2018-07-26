@@ -5,7 +5,7 @@
         <nav-bar-link to="/" label="Todo" />
         <nav-bar-link to="/movies" label="Movies" />
       </ul>
-      <shopping-cart-link />
+      <shopping-cart-link :count="countProducts"/>
     </div>
   </nav>  
 </template>
@@ -13,11 +13,18 @@
 <script>
 import NavBarLink from './NavBarLink'
 import ShoppingCartLink from './ShoppingCartLink'
+import { mapState } from 'vuex'
 
 export default {
   components: {
     NavBarLink,
     ShoppingCartLink,
+  },
+  computed: {
+    ...mapState(['productsInCart']),
+    countProducts () {
+      return this.productsInCart.length
+    }
   }
 }
 </script>
